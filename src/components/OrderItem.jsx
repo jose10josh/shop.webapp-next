@@ -11,10 +11,11 @@ const OrderItem = ({ product }) => {
 		removeFromCart(product);
 	};
 
+	console.log({product});
 	return (
 		<div className={styles.OrderItem}>
 			<figure>
-				<Image src={product?.images[0]} alt={product?.title} />
+				{ product && ( <Image src={product.images[0]} alt={product?.title}  /> ) }
 			</figure>
 			<p>{product?.title}</p>
 			<p>${product?.price}</p>

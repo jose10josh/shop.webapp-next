@@ -8,13 +8,13 @@ function MyApp({ Component, pageProps }) {
   const initialState = useInitialState();
   return (
     <AppContext.Provider value={initialState}>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-ZN80WG7H93" />
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZ1V7S9JP" />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-ZN80WG7H93');
+        gtag('config', 'G-7WZ1V7S9JP');
       `}
       </Script>
       <Header />

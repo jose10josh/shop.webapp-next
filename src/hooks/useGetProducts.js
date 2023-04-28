@@ -7,7 +7,12 @@ const useGetProducts = (API) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios(API);
-      setProducts(response.data);
+      const data = response.data.map(item => {
+        return {...item, images: ["https://picsum.photos/640/640?r=2827",
+        "https://picsum.photos/640/640?r=7321",
+        "https://picsum.photos/640/640?r=1023"]};
+      });
+      setProducts(data);
     }
     fetchData();
   }, [API]);
